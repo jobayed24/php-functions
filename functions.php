@@ -1,6 +1,13 @@
 <?php
 
+///unlimited perameter and arguments accept functions with type declaraiton
 
-function serve($itemname="Coffe",$itemnunber="1 cups"){
-    echo "{$itemnunber} of {$itemname} has/have been served";
+function sum (int ...$numbers):int {
+    $results=0;
+    for($i=0; $i<count($numbers); $i++){
+        $results+=$numbers[$i];
+    }
+    return $results;
 }
+
+echo sum(0);
