@@ -1,13 +1,25 @@
 <?php
 
-///unlimited perameter and arguments accept functions with type declaraiton
+///recursive functions full proccess called recusion ....
 
-function sum (int ...$numbers):int {
-    $results=0;
-    for($i=0; $i<count($numbers); $i++){
-        $results+=$numbers[$i];
+function printN($i){
+    if($i>10){
+        return;
     }
-    return $results;
+    
+    
+    echo "$i \n";
+    $i++;
+    printN($i);
 }
 
-echo sum(0);
+function startToEnd($sart,$end,$steping=2){
+    if($sart>$end){
+        return;
+    }
+    echo "$sart \n";
+    $sart+=$steping;
+    startToEnd($sart,$end,$steping);
+}
+
+startToEnd(3,55,6);
