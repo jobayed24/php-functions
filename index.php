@@ -1,6 +1,6 @@
 <?php
 require_once "functions.php";
 
-$x=null;   
-
-echo factorials($x); 
+$name="coffe";
+$n="4 cups";
+serve($name);
